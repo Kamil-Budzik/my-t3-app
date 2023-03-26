@@ -8,7 +8,7 @@ import { api, type RouterOutputs } from "~/utils/api";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { LoadingPage } from "~/components/Loading";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 dayjs.extend(relativeTime);
 
 const CreatePostWizard = () => {
