@@ -1,14 +1,16 @@
-import { ClerkProvider } from '@clerk/nextjs';
-import type { AppProps } from 'next/app'
+import { ClerkProvider } from "@clerk/nextjs";
+import type { AppProps } from "next/app";
 import { api } from "~/utils/api";
+import { Toaster } from "react-hot-toast";
 
 import "~/styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-      <ClerkProvider {...pageProps} >
-        <Component {...pageProps} />
-      </ClerkProvider>
+    <ClerkProvider {...pageProps}>
+      <Toaster position="bottom-center" />
+      <Component {...pageProps} />
+    </ClerkProvider>
   );
 }
 
